@@ -1,0 +1,297 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Startmin - Bootstrap Admin Theme</title>
+
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+        <!-- MetisMenu CSS -->
+        <link href="{% static 'css/metisMenu.min.css'%}" rel="stylesheet">
+        <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+        <!-- Timeline CSS -->
+        <link href="{% static 'css/timeline.css'%}" rel="stylesheet">
+
+        <!-- Custom CSS -->
+        <link href="{% static 'css/startmin.css'%}" rel="stylesheet">
+
+        <!-- Morris Charts CSS -->
+        <link href="{% static 'css/morris.css' %}" rel="stylesheet">
+
+        <!-- Custom Fonts -->
+        <link href="{% static 'css/font-awesome.min.css'%}" rel="stylesheet" type="text/css">
+<!--==========================================For the Support of the Lower Version of IE--=====================================================-->
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        </head>
+    <body>
+                <div id="wrapper">
+<!--=================================================================================-->
+<!--Navbar -->
+<!--/.Navbar -->
+
+
+                    <!--============================================================-->
+
+<!--======================================Navigation Part Button will added===================================================================-->
+                <nav class="navbar navbar-inverse navbar navbar-fixed-top" role="navigation">
+                <!--<div class="navbar-header">-->
+        <!--========================================Titile for navigation=====================================================================-->
+                    <!--<a class="navbar-brand" href="index.html"><font size="30px">Khetra</a></font>
+                </div>-->
+<!--=====================================Toggle Navigation Linking==========================================================================-->
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+        <!--=====================================The above two line create the toogle button only=====================================-->
+                    </button>
+                     <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                     <span class="icon-bar"></span>
+                </button>
+<!--================================================Creating icon at the Left=====================================================================-->
+            <ul class="nav navbar-nav navbar-left navbar-top-links">
+                    <li><a href="#"><font size="5px"><i class="fa fa-home fa-fw"></i> Genie Ali</a></font></li>
+
+                </ul>
+<!--===================================================Creating Menu at the Right Hand Side======================================================-->
+             <ul class="nav navbar-right navbar-top-links">
+
+
+<!--============================================Adding all the Drop Down to the bell Icon=========================================================-->
+<!--==============================================Adding All the User Icon========================================================================-->
+                   <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fa fa-user fa-fw"></i> secondtruth <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu dropdown-user">
+                            <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                            </li>
+                            <li class="divider"></li>
+                            <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+               </nav>
+<!---============================================Completed Nav Bar===============================================================================-->
+<!--=======================================================Side Bar Making=================================================================-->
+
+                <div class="navbar-panel-primary sidebar" role="navigation"style="width:290px;">
+                    <div class="sidebar-nav navbar-collapse">
+              <!--Here we define style also-->
+                        <ul class="nav" id="side-menu" >
+                            <li class="sidebar-search">
+                                <div class="input-group custom-search-form">
+
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fa fa-search"></i>
+                                        </button>
+                                </span>
+                                </div>
+                                 </li>
+                            <li style="background-color:orange">
+<!--=============================================================================SIDE BAR DASH BOARD=====================================-->
+                                <a href="index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            </li>
+<!--==================================================================Rates Card========================================================-->
+                            <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Profile<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="listing.html">Profile Summary</a>
+                                    </li>
+                                    <li>
+                                        <a href="competition.html">Profile Edit</a>
+                                    </li>
+                                </ul>
+
+                                 <li>
+                                 <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Projects<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="listing.html">www.usbromag.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="competition.html">www.Helenyys.com</a>
+                                    </li>
+                                    <li>
+                                        <a href="margin.html">www.vmokshagroup.com</a>
+                                    </li>
+                                </ul>
+
+                                 <li>
+                                <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Report<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>
+                                        <a href="Report.html">Rates Card Report</a>
+                                    </li>
+                                    <li>
+                                        <a href="listing.html">Listing</a>
+                                    </li>
+                                    <li>
+                                        <a href="competition.html">Competition</a>
+                                    </li>
+                                    <li>
+                                        <a href="margiin.html">Margin</a>
+                                    </li>
+                                     <li>
+                                        <a href="Proposed.html">Proposed</a>
+                                    </li>
+                                </ul>
+                                <!-- /.nav-second-level -->
+                            </li>
+                               </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+<!--==================================================================End of the Rate Card Design==========================================-->
+
+<!--==========================================================End of Side Bar============================================-->
+<!--Side Bar Naviagtion end Here-->
+            <div id="page-wrapper" style="margin-left:290px;">
+<!--============================================================Here we giving the margin from the left==================================-->
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">Dashboard</h1>
+                        </div>
+                    </div>
+                </div>
+<!--==================================Dashoboard Heading in the Body=====================================-->
+  <!-- /.row -->
+<!--==================================================First Card===========================================-->
+
+   <a href="{% url 'edit' %}"><div class="col-lg-4 col-md-4">
+                            <div class="panel panel-primary">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Profile</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>
+       <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-yellow">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Website Performance</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+      <a href="{% url 'ranking' %}"> <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Keyword Rank</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div></a>
+       <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Keyword Research</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+    <!--================================================================Second Row=======================================================-->
+    <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-red">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Onpage</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+       <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-yellow">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Social Media</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+       <div class="col-lg-4 col-md-4">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    <div class="row">
+                                        <div class="col-xs-3">
+                                            <i class="fa fa-comments fa-5x"></i>
+                                        </div>
+                                        <div class="col-xs-9">
+                                            <div><h4>Content</h4></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+       
+     <!--==========================================================
+<!---==================================Scripting===================================================================-->
+ <!-- jQuery -->
+        <script src="{% static 'js/jquery.min.js'%}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src='{% static "js/bootstrap.min.js" %}'></script>
+        <!-- Metis Menu Plugin JavaScript -->
+        <script src="{% static 'js/metisMenu.min.js' %}"></script>
+
+          <!-- Morris Charts JavaScript -->
+        <script src="{% static 'js/raphael.min.js'%}"></script>
+
+         <script src="{% static 'js/morris.min.js'%}"></script>
+        <!--====================================================
+
+        <!-- Custom Theme JavaScript -->
+        <script src="{% static 'js/startmin.js'%}"></script>

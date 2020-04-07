@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+  <h2>Person Form</h2>
+
+  <form method="post" id="personForm" data-state-url="{% url 'ajax_load_state' %}" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <button type="submit">Save</button>
+    <a href="{% url 'person_changelist' %}">Nevermind</a>
+  </form>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    $("#id_country").change(function () {
+      var url = $("#personForm").attr("data-state-url");
+      var countryId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'type':'country',
+           'data': countryId
+        },
+        success: function (data) {
+          $("#id_state").html(data);
+        }
+      });
+
+    });
+//#Second state
+   $("#id_state").change(function () {
+
+      var url = $("#personForm").attr("data-state-url");
+      var stateId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'type':'state',
+           'data': stateId
+        },
+        success: function (data) {
+          $("#id_city").html(data);
+        }
+      });
+
+    });
+//Location
+$("#id_city").change(function () {
+      var url = $("#personForm").attr("data-state-url");
+      var cityId = $(this).val();
+
+      $.ajax({
+        url: url,
+        data: {
+          'type':'city',
+           'data': cityId
+        },
+        success: function (data) {
+          $("#id_location").html(data);
+        }
+      });
+
+    });
+  </script>
+
+{% endblock %}
